@@ -6,16 +6,17 @@ const account = {
   discount: 0.1,
   orders: ['order-1', 'order-2', 'order-3'],
   changeDiscount(value) {
-    discount = value;
+    this.discount = value;
   },
   showOrders() {
-    return orders;
+    return this.orders;
   },
   addOrder(cost, order) {
-    balance -= cost;
-    orders.push(order);
+    this.balance -= cost;
+    this.orders.push(order);
   },
 };
+
 
 account.changeDiscount(0.15);
 console.log(account.discount); // 0.15
